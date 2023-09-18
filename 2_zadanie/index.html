@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test
+    </title>
+</head>
+<body>
+    <header class="header">
+        <ul class="ul">
+            <li><a href="https://ilibrary.ru/text/11/index.html">Война и мир</a></li>
+            <li><a href="https://ilibrary.ru/text/1070/p.15/index.html">Вий</a></li>
+            <li><a href="https://ilibrary.ru/text/69/index.html">Преступление и наказание</a></li>
+        </ul>
+    <h2 id="task">Ссылки</h2>
+    <ul>
+
+        <li><a id="about" href="http://www.kubsu.ru/" >Абсолютная гиперссылка на главную страницу сайта kubsu.ru</a></li>
+        <li><a href="https://www.kubsu.ru/" >Абсолютная на главную сайта kubsu.ru в протоколе https</a></li>
+        <li><img src="1443889275_6.jpg" alt="maincraft" style="width: 600px;"></li>
+        <li><a href="/vnut.html">Внутренняя страница</a></li>
+        <li><a href="/index.html">Главная страница</a></li>
+        <li><a href="#about">Фрагмент страницы </a></li>
+        <li><a href="/index.html?param1=12333;param2=23463646;param3=7457567563">3 параметра</a></li>
+        <li><a href="/vnut.html#about-color" class="site" target="_blank">Ссылка с параметром id в URL;</a></li>
+        <li><a href="./eeee.html"> Относительная на страницу в текущем каталоге </a> </li>
+        <li><a href="./about/test/2_ur.html">Ссылка на два каталога ниже (выше на 2 будет на странице)</a></li>
+        <li> Приглашаем в <a id="aInText" href="https://kubsu.ru/">КубГу</a> (контекстная ссылка в тексте)</li>
+        <li><a href="https://www.kubsu.ru/index.php/#section-content">Ссылка на секцию в стороннем сайте</a></li>
+        <li>
+            <img src="прямоуг.avif" usemap="#Map" alt="прямоугольник" width="200" height="150">
+        </li>
+        <li>
+        <img src="круг.jpg" usemap="#2Map"  alt="круг" width="250" height="250">
+
+            <map name="Map">
+            <area href="https://www.minecraft.net/ru-ru/about-legends" shape="rect" coords="0,0,200,150" alt="прямоугольная ссылка">
+            </map>
+            <map name="2Map">
+                <area href="https://www.minecraft.net/ru-ru/about-dungeons" shape="circle" coords="125,125,125" alt="круглая ссылка">
+            </map>
+        </li>
+        <li><a>Ссылка без href</a></li>
+        <li><a href="">Ссылка с пустым href</a></li>
+        <li><a href="https://kubsu.ru/" rel="nofollow"> Ссылка, по которой запрещен переход поисковикам</a></li>
+        <li><!--/noindex--><a href="https://kubsu.ru/%22%3E" rel="noindex">Запрещенная для индексации поисковиками</a><!--/noindex--></li>
+        <li>
+            <p>Список ссылок навигации сайта</p>
+            <nav>
+                <ol>
+                    <li><a href="#task" title="task">Ссылки</a></li>
+                    <li><a href="#form" title="form">Форма</a></li>
+                </ol>
+            </nav>
+        <li><a href="ftp://test:password@private.public.example.com/directory/file.txt">Ссылка на файл на сервере FTP савторизацией</a></li>
+        <li>
+            <form>
+                <h2 id="form">Форма</h2>
+                    <label for="fio">ФИО:</label>
+                    <input type="text" id="fio" name="fio"><br><br>
+            
+                    <label for="phone">Телефон:</label>
+                    <input type="tel" id="phone" name="phone"><br><br>
+            
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email"><br><br>
+            
+                    <label for="birthdate">Дата рождения:</label>
+                    <input type="date" id="birthdate" name="birthdate"><br><br>
+            
+                    <label>Пол:</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Мужской</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Женский</label><br><br>
+            
+                    <label for="programming-language">Любимый язык программирования:</label>
+                    <select id="programming-language" name="programming-language" multiple>
+                        <option value="pascal">Pascal</option>
+                        <option value="c">C</option>
+                        <option value="cpp">C++</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="typescript">TypeScript</option>
+                        <option value="php">PHP</option>
+                        <option value="python">Python</option>
+                        <option value="java">Java</option>
+                        <option value="haskell">Haskell</option>
+                        <option value="clojure">Clojure</option>
+                        <option value="prolog">Prolog</option>
+                        <option value="scala">Scala</option>
+                    </select><br><br>
+            
+                    <label for="bio">Биография:</label><br>
+                    <textarea id="bio" name="bio" rows="4" cols="50"></textarea><br><br>
+            
+                    <input type="checkbox" id="contract" name="contract">
+                    <label for="contract">С контрактом ознакомлен(а)</label><br><br>
+            
+                    <input type="submit" value="Сохранить">
+                </form>
+        </li>
+    </ul>      
+      
+</body>
+</html>
