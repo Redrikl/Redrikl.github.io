@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,50 +50,101 @@
                 </ol>
             </nav>
         <li><a href="ftp://test:password@private.public.example.com/directory/file.txt">Ссылка на файл на сервере FTP савторизацией</a></li>
+        
+        <table class="table block">
+            <tr class="odd">
+                <th class="table_header table_item" colspan="4">
+                    Название таблицы
+                </th>
+            </tr>
+            <tr class="even">
+                <th class="table_item">Колонка 1</th>
+                <th class="table_item">Колонка 2</th>
+                <th class="table_item">Колонка 3</th>
+                <th class="table_item">Колонка 4</th>
+            </tr>
+            <tr class="odd">
+                <td colspan="2" class="table_item">11</td>
+                <td class="table_item">31</td>
+                <td class="table_item">41</td>
+            </tr>
+            <tr class="even">
+                <td class="table_item">12</td>
+                <td class="table_item">22</td>
+                <td class="table_item">32</td>
+                <td class="table_item">42</td>
+            </tr>
+            <tr class="odd">
+                <td rowspan="2" class="table_item">13</td>
+                <td class="table_item">23</td>
+                <td class="table_item">33</td>
+                <td class="table_item">43</td>
+            </tr>
+            <tr class="even">
+                <td class="table_item">24</td>
+                <td colspan="2" class="table_item">34</td>
+            </tr>
+        </table>
         <li>
-            <form>
-                <h2 id="form">Форма</h2>
-                    <label for="fio">ФИО:</label>
-                    <input type="text" id="fio" name="fio"><br><br>
-            
-                    <label for="phone">Телефон:</label>
-                    <input type="tel" id="phone" name="phone"><br><br>
-            
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email"><br><br>
-            
-                    <label for="birthdate">Дата рождения:</label>
-                    <input type="date" id="birthdate" name="birthdate"><br><br>
-            
-                    <label>Пол:</label>
-                    <input type="radio" id="male" name="gender" value="male">
-                    <label for="male">Мужской</label>
-                    <input type="radio" id="female" name="gender" value="female">
-                    <label for="female">Женский</label><br><br>
-            
-                    <label for="programming-language">Любимый язык программирования:</label>
-                    <select id="programming-language" name="programming-language" multiple>
-                        <option value="pascal">Pascal</option>
-                        <option value="c">C</option>
-                        <option value="cpp">C++</option>
-                        <option value="javascript">JavaScript</option>
-                        <option value="typescript">TypeScript</option>
-                        <option value="php">PHP</option>
-                        <option value="python">Python</option>
-                        <option value="java">Java</option>
-                        <option value="haskell">Haskell</option>
-                        <option value="clojure">Clojure</option>
-                        <option value="prolog">Prolog</option>
-                        <option value="scala">Scala</option>
-                    </select><br><br>
-            
-                    <label for="bio">Биография:</label><br>
-                    <textarea id="bio" name="bio" rows="4" cols="50"></textarea><br><br>
-            
-                    <input type="checkbox" id="contract" name="contract">
-                    <label for="contract">С контрактом ознакомлен(а)</label><br><br>
-            
-                    <input type="submit" value="Сохранить">
+            <form action="/" method="POST" class="block">
+                <h2 class="block_title">Форма</h2>
+                    <label>
+                        <input class="form_item" type="text" name="fio" placeholder="Введите ФИО" required>
+                    </label>
+                    <br>
+                    <label>
+                        <input class="form_item" type="tel" name="tel" placeholder="Введите телефон" required>
+                    </label>
+                    <br>
+                    <label>
+                        <input class="form_item" type="email" name="email" placeholder="Введите email" required>
+                    </label>
+                    <br>
+                    <label class="form_text">
+                        Дата рождения:
+                        <input class="form_item" type="date" name="birthday" required>
+                    </label>
+                    <br>
+                    <p class="form_text">
+                        Пол:
+                        <br>
+                        <label class="form_text">
+                            <input type="radio" name="gender" value="male" required>
+                            Мужской
+                        </label>   
+                        <label>
+                            <input type="radio" name="gender" value="female" required>
+                            Женский
+                        </label>
+                    </p>
+                    <br>
+                    <label class="form_text">
+                        Выберете свои любимые языки:
+                        <br>
+                        <br>
+                        <select name="favorite_language" multiple required>
+                            <option value="Pascal">Pascal</option>
+                            <option value="C">C</option>
+                            <option value="C++">C++</option>
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="PHP">PHP</option>
+                            <option value="Python">Python</option>
+                            <option value="Java">Java</option>
+                            <option value="Haskel">Haskel</option>
+                            <option value="Clojure">Clojure</option>
+                            <option value="Prolog">Prolog</option>
+                            <option value="Scala">Scala</option>
+                        </select>
+                    </label>
+                    <br>
+                    <textarea name="biography" required>Расскажите немного о себе</textarea>
+                    <br>
+                    <label class="agreement">
+                        <input type="checkbox" name="agreement" required>
+                        С контрактом ознакомлен (а)
+                    </label>
+                    <br>
+                    <input class="form_item button" type="submit" id="Unique_Id" value="Отправить">
                 </form>
         </li>
     </ul>      
