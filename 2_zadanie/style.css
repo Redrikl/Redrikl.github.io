@@ -6,7 +6,7 @@
 }
 
 .header {
-    background-color: #26425A;
+    background-color: #ffffff;
 }
 
 .content {
@@ -31,7 +31,7 @@
 }
 
 .name {
-    color: #E1CBD7;
+    color:#07bc0c;
     font-family: Arial;
     font-size: 30px;
     float: right;
@@ -67,7 +67,7 @@
         }
 
 body {
-    background-color: rgba(195, 139, 212, 0.5);
+    background-color: rgba(68, 68, 68, 0.945);
 }
 
 h1 {
@@ -86,9 +86,9 @@ h1 {
 }
 
 .block {
-    background-color: #E1CBD7;
+    background-color: #058a26;
     padding: 20px;
-    border-radius: 20px;
+   
     border: 2px solid #26425A;
     margin-bottom: 30px;
 }
@@ -130,11 +130,11 @@ h1 {
 }
 
 .odd {
-    background-color: #DFB6B2;
+    background-color: #b9b2df;
 }
 
 .even {
-    background-color: #854F6C;
+    background-color: #4cac69;
 }
 
 .table_item {
