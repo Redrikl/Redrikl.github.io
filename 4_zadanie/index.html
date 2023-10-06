@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test
+    </title>
+</head>
+<body>
+    <header class="header">
+        <div class="content">
+            <div class="wrapper">
+                <div class="left">
+                    <div class="logo">
+                        <img src="logotip.jpg" alt="Логотип" width="75" height="75">
+                    </div>
+                    <div class="name">
+                        Minecraft
+                    </div>
+                </div>
+                <div class="right">
+                    <nav>
+                        <ul class="list wrapper">
+                            <li>
+                                <a href="https://www.minecraft.net/ru-ru/about-minecraft">Official sait</a>
+                            </li>
+                            <li>
+                                <a href="https://www.minecraft.net/ru-ru/realms">Realms</a>
+                            </li>
+                            <li>
+                                <a href="https://shop.minecraft.net">Shop</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            
+        </div>
+    </header>
+    <h2 id="task">Ссылки</h2>
+    <ul>
+
+        <li><a id="about" href="http://www.kubsu.ru/" >Абсолютная гиперссылка на главную страницу сайта kubsu.ru</a></li>
+        <li><a href="https://www.kubsu.ru/" >Абсолютная на главную сайта kubsu.ru в протоколе https</a></li>
+        <li><img src="1443889275_6.jpg" alt="maincraft" style="width: 600px;"></li>
+        <li><a href="/vnut.html">Внутренняя страница</a></li>
+        <li><a href="/index.html">Главная страница</a></li>
+        <li><a href="#about">Фрагмент страницы </a></li>
+        <li><a href="/index.html?param1=12333;param2=23463646;param3=7457567563">3 параметра</a></li>
+        <li><a href="/vnut.html#about-color" class="site" target="_blank">Ссылка с параметром id в URL;</a></li>
+        <li><a href="./eeee.html"> Относительная на страницу в текущем каталоге </a> </li>
+        <li><a href="./about/test/2_ur.html">Ссылка на два каталога ниже (выше на 2 будет на странице)</a></li>
+        <li> Приглашаем в <a id="aInText" href="https://kubsu.ru/">КубГу</a> (контекстная ссылка в тексте)</li>
+        <li><a href="https://www.kubsu.ru/index.php/#section-content">Ссылка на секцию в стороннем сайте</a></li>
+        <li>
+            <img src="прямоуг.avif" alt="Маиннекамф" usemap="#Map" width="200" height="200">
+                <map name="Map">
+                    <area href="https://www.youtube.com/watch?v=aeBsl8feQao" shape="rect" coords="0,0,100,200"
+                        alt="ссылка на квадратном объекте">
+                    <area href="https://www.youtube.com/watch?v=1DhWXAiNgfQ" shape="rect" coords="100,0,200,200"
+                        alt="ссылка на круглом объекте">
+                </map>
+        </li>
+        <li><a>Ссылка без href</a></li>
+        <li><a href="">Ссылка с пустым href</a></li>
+        <li><a href="https://kubsu.ru/" rel="nofollow"> Ссылка, по которой запрещен переход поисковикам</a></li>
+        <li><!--/noindex--><a href="https://kubsu.ru/%22%3E" rel="noindex">Запрещенная для индексации поисковиками</a><!--/noindex--></li>
+        <li>
+            <p>Список ссылок навигации сайта</p>
+            <nav>
+                <ol>
+                    <li><a href="#task" title="task">Ссылки</a></li>
+                    <li><a href="#form" title="form">Форма</a></li>
+                </ol>
+            </nav>
+        <li><a href="ftp://test:password@private.public.example.com/directory/file.txt">Ссылка на файл на сервере FTP савторизацией</a></li>
+
+        <li><table class="table block">
+            <tr class="odd">
+                <th class="table_header table_item" colspan="4">
+                    Список материалов
+                </th>
+            </tr>
+            <tr class="even">
+                <th class="table_item">1 этап</th>
+                <th class="table_item">2 этап</th>
+                <th class="table_item">3 этап</th>
+                <th class="table_item">4 этап</th>
+            </tr>
+            <tr class="odd">
+                <td colspan="2" class="table_item">Вода</td>
+                <td class="table_item">Лава</td>
+                <td class="table_item">Камень</td>
+            </tr>
+            <tr class="even">
+                <td class="table_item">56</td>
+                <td class="table_item">452</td>
+                <td class="table_item">5 стаков</td>
+                <td class="table_item">64</td>
+            </tr>
+            <tr class="odd">
+                <td rowspan="2" class="table_item">эедерпёры</td>
+                <td class="table_item">5 стрелок</td>
+                <td class="table_item">32 ведра</td>
+                <td class="table_item">48 стаков</td>
+            </tr>
+            <tr class="even">
+                <td class="table_item">24</td>
+                <td colspan="2" class="table_item">34</td>
+            </tr>
+        </table></li>
+        <li>
+            <form action="/" method="POST" class="block">
+                <h2 class="block_title">Форма</h2>
+                    <label>
+                        <input class="form_item" type="text" name="fio" placeholder="Введите ФИО" required>
+                    </label>
+                    <br>
+                    <label>
+                        <input class="form_item" type="tel" name="tel" placeholder="Введите телефон" required>
+                    </label>
+                    <br>
+                    <label>
+                        <input class="form_item" type="email" name="email" placeholder="Введите email" required>
+                    </label>
+                    <br>
+                    <label class="form_text">
+                        Дата рождения:
+                        <input class="form_item" type="date" name="birthday" required>
+                    </label>
+                    <br>
+                    <p class="form_text">
+                        Пол:
+                        <br>
+                        <label class="form_text">
+                            <input type="radio" name="gender" value="male" required>
+                            Мужской
+                        </label>   
+                        <label>
+                            <input type="radio" name="gender" value="female" required>
+                            Женский
+                        </label>
+                    </p>
+                    <br>
+                    <label class="form_text">
+                        Выберете свои любимые языки:
+                        <br>
+                        <br>
+                        <select name="favorite_language" multiple required>
+                            <option value="Pascal">Pascal</option>
+                            <option value="C">C</option>
+                            <option value="C++">C++</option>
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="PHP">PHP</option>
+                            <option value="Python">Python</option>
+                            <option value="Java">Java</option>
+                            <option value="Haskel">Haskel</option>
+                            <option value="Clojure">Clojure</option>
+                            <option value="Prolog">Prolog</option>
+                            <option value="Scala">Scala</option>
+                        </select>
+                    </label>
+                    <br>
+                    <textarea name="biography" required>Расскажите немного о себе</textarea>
+                    <br>
+                    <label class="agreement">
+                        <input type="checkbox" name="agreement" required>
+                        С контрактом ознакомлен (а)
+                    </label>
+                    <br>
+                    <input class="form_item button" type="submit" id="Unique_Id" value="Отправить">
+                </form>
+        </li>
+    </ul>      
+      
+</body>
+</html>
