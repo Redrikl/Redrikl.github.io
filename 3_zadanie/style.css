@@ -11,6 +11,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: #000;
     font-size: 16px;
+    background-color: #4a494b;
 }
 
 a {
@@ -30,7 +31,7 @@ a {
 
 .header {
     background: #121212;
-    color: #fff;
+    color: #86e755;
 
     padding: 15px 0;
 }
@@ -86,7 +87,7 @@ a {
 }
 
 .header__menu-link {
-    color: #fff;
+    color: #a0e080;
 }
 
 
@@ -152,10 +153,10 @@ a {
 }
 
 .flex-box-order__table-odd {
-    background-color: aqua;
+    background-color: rgb(76, 209, 50);
 }
 .flex-box-order__table-even {
-    background-color: aquamarine;
+    background-color: rgb(255, 255, 255);
 }
 
 
