@@ -176,7 +176,7 @@ $(document).ready(function()
                             { e.preventDefault();
                             responseMessage.empty();
                             var formData = new FormData(this);
-         $.ajax({ url: 'https://formcarry.com/s/Enf6jxAuC-', type: 'POST', data: formData, processData: false, contentType: false, success: function(response) 
+         $.ajax({ url: 'https://formcarry.com/s/XPrk1IyagZ', type: 'POST', data: formData, processData: false, contentType: false, success: function(response) 
          { responseMessage.text('Форма успешно отправлена!').addClass('success');
          form.trigger('reset');
          localStorage.removeItem('feedbackFormData');
