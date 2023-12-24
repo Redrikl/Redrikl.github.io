@@ -1,242 +1,299 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
     <title>Redrikl.com</title>
-</head>
-<body>
-    <header class="header">
-        <div class="container header__container">
-            <div class="header__content-left">
-                <div class="header__logo">
-                    <img  class="header__logo-img" src="images/logotip.png" alt="Логотип" width="50" height="50">
+  </head>
+
+    <header class="header bg-light">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12 col-md-6">
+              <div class="d-flex align-items-center">
+                <div class="logo mr-3">
+                  <img  class="header__logo-img" src="images/logotip.png" alt="Логотип" width="50" height="50">
                 </div>
-                <div class="header__title">
-                    Minecraft
-                </div>
+                <h1>Minecraft</h1>
+              </div>
             </div>
-            <nav class="header__nav">
-                <ul class="header__menu">
-                    <li class="header__menu-item">
-                        <a class="header__menu-link" href="https://redrikl.github.io/3_zadanie/#id_ul">Official ssilci</a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a class="header__menu-link" href="https://redrikl.github.io/3_zadanie/#id_table">Tabl</a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a class="header__menu-link" href="https://redrikl.github.io/3_zadanie/#id_form">Form</a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="col-12 col-md-6 container-lg">
+              <div class="header__content-down text-right">
+                <nav>
+                  <div class="container-fluid">
+                      <ul class="list-inline flex-row flex-sm-column">
+                        <li class="list-inline-item"><a class="header__menu-link" href="#task">Official ssilci</a></li>
+                        <li class="list-inline-item"><a class="header__menu-link" href="#table">Tabl</a></li>
+                        <li class="list-inline-item"><a class="header__menu-link" href="#form">Form</a></li>
+                      </ul>
+                  </div>
+              </nav>
+              </div>
+            </div>
+          </div>
         </div>
-    </header>
+      </header>
+
+
     <main class="main">
-
-        <section class="flex-box-order">
-            <div class="container flex-box-order__container">
-
-
-                <!--======== UL ========-->
-
-
-                <h1 class="flex-box-order__title">Ссылки</h1>
-                <ul class="flex-box-order__list" id="id_ul">
-                    <li class="flex-box-order__list-item">
-                        <a class="flex-box-order__list-link" href="http://www.kubsu.ru/index.php">Основной сайт КубГУ</a>
-                    </li>
-                    <li class="flex-box-order__list-item">
-                        <a class="flex-box-order__list-link" href="https://www.kubsu.ru/index.php">Основной сайт КубГУ в протоколе https</a>
-                    </li>
-                    <li class="flex-box-order__list-item">
-                        <a class="flex-box-order__list-link" href="https://www.minecraft.net/ru-ru/community">
-                            <img src="images/1443889275_6.jpg" width="300" alt="Мир маинкрафт">
-                        </a>
-                    </li>
-                    <li class="flex-box-order__list-item">
-                        <a class="flex-box-order__list-link" href="/inner.html">Сокращенная ссылка на внутреннюю страницу</a>
-                    </li>
-                    <li class="flex-box-order__list-item">
-                        <a class="flex-box-order__list-link" href="/index.html">Сокращенная ссылка на главную страницу</a>
-                    </li>
-                    <li class="flex-box-order__list-item">
-                        <a class="flex-box-order__list-link" href="#Unique_Id">Ссылка на кнопку внизу</a>
-                    </li>
-                    <li class="flex-box-order__list-item">
-                        <a class="flex-box-order__list-link" href="https://www.youtube.com/watch?v=xm3YgoEiEDc&t=400s&ab_channel=10Hours&t=10000">Ссылка с тремя параметрами в URL</a>
-                    </li>
-                    <li class="flex-box-order__list-item">
-                        <a class="flex-box-order__list-link" href="https://www.minecraft.net/ru-ru#1">Ссылка с параметром id в URL</a>
-                    </li>
-                    <li class="flex-box-order__list-item">
-                        <a class="flex-box-order__list-link" href="inner.html">Относительная ссылка на страницу в текущем каталоге</a>
-                    </li>
-                    <li class="flex-box-order__list-item">
-                        <a class="flex-box-order__list-link" href="about/about_inner.html">Относительная ссылка на страницу в каталоге about</a>
-                    </li>
-                    <li class="flex-box-order__list-item">
-                        <p>Кто мог знать, что <a class="flex-box-order__list-link" href="https://www.zoopark-rostov.ru/index.php/novosti-i-sobytiya/667-5-interesnykh-faktov-o-kapibarakh">капибары</a> завоюют такую любовь общественности?</p>
-                    </li>
-                    <li class="flex-box-order__list-item">
-                        <a class="flex-box-order__list-link" href="https://stackoverflow.com/questions/396145/how-can-i-vertically-center-a-div-element-for-all-browsers-using-css#answers-header">Ссылка на фрагмент страницы стороннего сайта</a>
-                    </li>
-                    <li class="flex-box-order__list-item">
-                        <p>
-                            Выбери сторону!
-                        </p>
-                        <img src="images/прямоуг.png" alt="Противостояние" usemap="#Picture" height="200">
+        <div class="container">
+          <div class="container-fluid flex flex-column d-flex">
+        <section class="section__links order-2 order-md-1">
+            <ul class="list-unstyled">
+              <li class="references__item">
+                <h2 id="task">Ссылки</h2>
+              </li>
+            <li class="references__item">
+                <a href="http://kubsu.ru"> Официальный сайт КУБГУ(1)</a>
+            </li>
+            <li class="references__item">
+                <a href="https://kubsu.ru"> Официальный сайт КУБГУ в протоколе https(2) </a>
+            </li>
+            <li class="references__item">
+              <a class="flex-box-order__list-link" href="https://www.minecraft.net/ru-ru/community">
+                <img src="images/1443889275_6.jpg" width="300" alt="Мир маинкрафт">
+            </a>
+            </li>
+            <li class="references__item">
+                <a href="/4_zadanie/vnutri.html"> Внутренняя страница(4) </a>
+            </li>
+            <li class="references__item">
+                <a href="/4_zadanie/index.html"> Главная страница(5)</a>
+            </li>
+            <li class="references__item">
+                <a href="#form">Фрагмент сайта(6)</a>
+            </li>
+            <li class="references__item">
+                <a href="https://www.youtube.com/watch?v=rlqCHjM77cI" target="_blank"> Ссылка
+                    с тремя параметрами в URL(7)</a>
+            </li>
+            <li class="references__item">
+                <a href="https://www.kubsu.ru#privet">Ссылка с параметром id(8) </a>
+            </li>
+            <li class="references__item">
+                <a href="./dop.html"> Относительная на страницу в текущем каталоге(9) </a>
+            </li>
+            <li class="references__item">
+                <a href="./about/ssilka.html">Ссылка относительная на страницу в каталоге about(10)</a>
+            </li>
+            <li class="references__item">
+                <a href ="/4_zadanie/about/ssilka.html"> Относительная на страницу выше текущего(11)</a>
+            </li>
+             <li class="references__item">
+                <a href="/4_zadanie/about/newuroven/tree.html">Ссылка на страницу на 2 уровня ниже(12)</a>
+            </li>
+            <li class="references__item">
+                <p>Лучшая музыка на планете
+                    <a href="https://www.youtube.com/watch?v=_tA1nP1iits&t=1372s">здесь</a>
+                    (Контекстная в тексте абзаца(13))
+                </p>
+            </li>
+            <li class="references__item">
+                <a href=https://ru.wikipedia.org/wiki/Minecraft#История>Ссылка на фрагмент страницы
+                    стороннего сайта(14)</a>
+            </li>
+            <li class="references__item">
+                <p>Выбери сторону!(15)</p>
+                <img src="images/прямоуг.png" alt="Противостояние" usemap="#Picture" height="200">
                         <map name="Picture">
                             <area shape="rect" coords="0,0,225,200" href="https://www.youtube.com/watch?v=1JSjZqV-YK8" title="За Добро!" alt="Добро">
                             <area shape="rect" coords="225,0,500,500" href="https://www.youtube.com/watch?v=1DhWXAiNgfQ" title="У нас есть пиченьки!" alt="Ад">
                         </map>
-                    </li>
-                        
-                    <li class="flex-box-order__list-item">
-                        <a class="flex-box-order__list-link" href="/">Ссылка с пустым href</a>
-                    </li>
-                    <li class="flex-box-order__list-item">
-                        <a class="flex-box-order__list-link">Ссылка без href</a>
-                    </li>
-                    <li class="flex-box-order__list-item">
-                        <a class="flex-box-order__list-link" href="inner.html" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a>
-                    </li>
-                    <li class="flex-box-order__list-item">
-                        <!--noindex-->
-                            <a class="flex-box-order__list-link" href="inner.html">Текст этой ссылки запрещен для индексации поисковиками</a>
-                        <!--/noindex-->
-                    </li>
-                    <li class="flex-box-order__list-item">
-                        <a class="flex-box-order__list-link" href="">Ссылка на файл на сервере ftp с авторизацией</a>
-                    </li>
-                </ul>
+            </li>
+            <li class="references__item">
+                <a href="">Ссылка с пустым href(16)</a>
+            </li>
+            <li class="references__item">
+                <a>Ссылка без href(17)</a>
+            </li>
+            <li class="references__item">
+                <a href="https://kubsu.ru" rel="nofollow"> Ссылка, по которой запрещен переход поисковикам(18)</a>
+            </li>
+            <li class="references__item">
+                <!--noindex--><a href="https://kubsu.ru/"> Ссылка по которой нельзя индексировать
+                    яндексу(19)</a><!--/noindex-->
+            </li>
+            <li class="references__item">
+                <p>Список ссылок навигации сайта(20)</p>
+                <nav>
+                    <ol class="list_navig">
+                        <li><a href="#task1" title="task">Начало</a></li>
+                        <li><a href="#table" title="table">Таблица</a></li>
+                        <li><a href="#form" title="form">Форма</a></li>
+                    </ol>
+                </nav>
+            </li>
+            <li class="references__item">
+                <a href="ftp://demo:demo@http://demo.wftpserver.com/main.html/download/Summer.jpg">FTP файл(21)</a>
+            </li>
+        </ul>
+    </section>
+            <section class="section__table order-1 order-md-2">
+              <table class="table table-bordered">
+                <tr class="odd">
+                  <th class="table_header" colspan="4" id="table">Таблица</th>
+                </tr>
 
-
-                <!--======== OL ==========-->
-
-
-                <ol class="flex-box-order__ol-list" id="id_ol">
-                    <li class="flex-box-order__list-item">
-                        <a class="flex-box-order__list-link" href="https://ru.wikipedia.org/wiki/C%2B%2B" title="Скорость и контроль!">C++</a>
-                    </li>
-                    <li class="flex-box-order__list-item">
-                        <a class="flex-box-order__list-link" href="https://ru.wikipedia.org/wiki/Java" title="Мультиплатформенность наше всё!">Java</a>
-                    </li>
-                </ol>
-
-
-                <!--======== TABLE ========-->
-
-
-                <table class="flex-box-order__table" id="id_table">
-                    <tr class="flex-box-order__table-odd">
-                        <th class="flex-box-order__table-header flex-box-order__table-item" colspan="4">
-                            Список материалов
-                        </th>
-                    </tr>
-                    <tr class="flex-box-order__table-even">
-                        <th class="flex-box-order__table-item">1 этап</th>
-                        <th class="flex-box-order__table-item">2 этап</th>
-                        <th class="flex-box-order__table-item">3 этап</th>
-                        <th class="flex-box-order__table-item">4 этап</th>
-                    </tr>
-                    <tr class="flex-box-order__table-odd">
-                        <td class="flex-box-order__table-item" colspan="2">Вода</td>
-                        <td class="flex-box-order__table-item">Лава</td>
-                        <td class="flex-box-order__table-item">Камень</td>
-                    </tr>
-                    <tr class="flex-box-order__table-even">
-                        <td class="flex-box-order__table-item">56</td>
-                        <td class="flex-box-order__table-item">452</td>
-                        <td class="flex-box-order__table-item">5 стаков</td>
-                        <td class="flex-box-order__table-item">64</td>
-                    </tr>
-                    <tr class="flex-box-order__table-odd">
-                        <td class="flex-box-order__table-item" rowspan="2">эндерпёрлы</td>
-                        <td class="flex-box-order__table-item">5 стрелок</td>
-                        <td class="flex-box-order__table-item">32 ведра</td>
-                        <td class="flex-box-order__table-item">48 стаков</td>
-                    </tr>
-                    <tr class="flex-box-order__table-even">
-                        <td class="flex-box-order__table-item">24</td>
-                        <td class="flex-box-order__table-item" colspan="2">34</td>
-                    </tr>
+                <tr class="even">
+                    <th>Колонка 1</th>
+                    <th>Колонка 2</th>
+                    <th>Колонка 3</th>
+                    <th>Колонка 4</th>
+                  </tr>
+                  <tr class="odd">
+                    <td colspan="2">Ячейка 11 объединенная с 12</td>
+                    <td>Ячейка 13</td>
+                    <td>Ячейка 14</td>
+                  </tr>
+                  <tr class="even">
+                    <td>Ячейка 21</td>
+                    <td>Ячейка 22</td>
+                    <td colspan="2">Ячейка 23 объединенная с 24</td>
+                  </tr>
+                  <tr class="odd">
+                    <td>Ячейка 31</td>
+                    <td colspan="2">Ячейка 32 объединенная с 33</td>
+                    <td>Ячейка 34</td>
+                  </tr>
+                  <tr class="even">
+                    <td colspan="2">Ячейка 41 объединенная с 42</td>
+                    <td>Ячейка 43</td>
+                    <td>Ячейка 44</td>
+                  </tr>
+                  <tr class="odd">
+                    <td>Ячейка 51</td>
+                    <td>Ячейка 52</td>
+                    <td rowspan="2">Ячейка 53 объединенная с 63</td>
+                    <td>Ячейка 54</td>
+                  </tr>
+                  <tr class="even">
+                    <td>Ячейка 61</td>
+                    <td>Ячейка 62</td>
+                    <td>Ячейка 64</td>
+                  </tr>
                 </table>
+              </section>
             </div>
-        </section>
 
-        <section class="form-section">
-            <div class="container">
-                <form id="id_form" action="/" method="POST" class="block">
-                    <h2 class="block_title">Форма</h2>
-                        <label>
-                            <input class="form_item" type="text" name="fio" placeholder="Введите ФИО" required pattern="^[А-Яа-яЁё\s]+$">
-                        </label>
-                        <br>
-                        <label>
-                            <input class="form_item" type="tel" name="tel" placeholder="Введите телефон" required pattern="^[ 0-9]+$">
-                        </label>
-                        <br>
-                        <label>
-                            <input class="form_item" type="email" name="email" placeholder="Введите email" required>
-                        </label>
-                        <br>
-                        <label class="form_text">
-                            Дата рождения:
-                            <input class="form_item" type="date" name="birthday" required>
-                        </label>
-                        <br>
-                        <p class="form_text">
-                            Пол:
-                            <br>
-                            <label class="form_text">
-                                <input type="radio" name="gender" value="male" required>
-                                Мужской
-                            </label>   
-                            <label>
-                                <input type="radio" name="gender" value="female" required>
-                                Женский
-                            </label>
-                        </p>
-                        <br>
-                        <label class="form_text">
-                            Выберете свои любимые языки:
-                            <br>
-                            <br>
-                            <select name="favorite_language" multiple required>
-                                <option value="Pascal">Pascal</option>
-                                <option value="C">C</option>
-                                <option value="C++">C++</option>
-                                <option value="JavaScript">JavaScript</option>
-                                <option value="PHP">PHP</option>
-                                <option value="Python">Python</option>
-                                <option value="Java">Java</option>
-                                <option value="Haskel">Haskel</option>
-                                <option value="Clojure">Clojure</option>
-                                <option value="Prolog">Prolog</option>
-                                <option value="Scala">Scala</option>
-                            </select>
-                        </label>
-                        <br>
-                        <textarea name="biography" required>Расскажите немного о себе</textarea>
-                        <br>
-                        <label class="agreement">
-                            <input type="checkbox" name="agreement" required>
-                            С контрактом ознакомлен (а)
-                        </label>
-                        <br>
-                        <input class="form_item button" type="submit" id="Unique_Id" value="Отправить">
-                    </form>
+       <section class="section__form">
+          <h2 id="form">Форма</h2>
+          <form>
+            <div class="form-group">
+              <label for="fio">ФИО:</label>
+              <input
+                type="text"
+                id="fio"
+                name="fio"
+                class="form-control"
+                required
+                pattern="^[А-Яа-яЁё\s]+$"
+              />
             </div>
-        </section>
+            <div class="form-group">
+              <label for="phone">Телефон:</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                class="form-control"
+                required
+                pattern="^[ 0-9]+$"
+              />
+            </div>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required /><br /><br />
 
-    </main>
+            <label for="birthdate">Дата рождения:</label>
+            <input
+              type="date"
+              id="birthdate"
+              name="birthdate"
+              required
+            /><br /><br />
 
-    <footer class="footer">
-        <div class="container footer__container">
-            <div class="footer__text">Все права запрещены</div>
+            <label>Пол:</label>
+            <input type="radio" id="male" name="gender" value="male" required />
+            <label for="male">Мужской</label>
+            <input
+              type="radio"
+              id="female"
+              name="gender"
+              value="female"
+              required
+            />
+            <label for="female">Женский</label><br /><br />
+
+            <label>Любимый язык программирования:</label>
+            <label>
+              <br />
+              <select>
+                <option disabled>Любимый язык программирования</option>
+                <option value="Js">Js</option>
+                <option value="C++">C++</option>
+                <option value="Pascal">Pascal</option>
+                <option value="PHP">PHP</option>
+                <option value="Python">Python</option>
+                <option value="Java">Java</option>
+                <option value="Haskel">Haskel</option>
+                <option value="Clojure">Clojure</option>
+                <option value="Prolog">Prolog</option>
+                <option value="Scala">Scala</option>
+                <option value="C">C</option>
+              </select> </label
+            ><br /><br />
+
+            <label for="bio">Биография:</label><br />
+            <textarea id="bio" name="bio" rows="4" cols="50" required></textarea
+            ><br /><br />
+
+            <input type="checkbox" id="contract" name="contract" required />
+            <label for="contract">С контрактом ознакомлен(а)</label><br /><br />
+
+            <button type="submit" class="btn btn-primary">Сохранить</button>
+          </form>
+          <p>Выберите товар:
+            <select name="myselect" required>
+                <option value="1">Сервер 555 руб.</option>
+                <option value="2">Мост 440 руб.</option>
+                <option value="3">Випка 999 руб.</option>
+            </select>
+        </p>
+
+        <p>Введите количество: <input id="quantity" class="quantity"></p>
+
+        <div class="myradios" id="myradios">
+            <label><input type="radio" name="myradio" value="40">Антикраш</label>
+            <label><input type="radio" name="myradio" value="40">Антивирус</label>
+            <label><input type="radio" name="myradio" value="40">Антиспам</label>
         </div>
-    </footer>
 
+        <p class="mycheckbox" id="mycheckbox">
+            <label>
+                Нужна архивация? <input value="10" type="checkbox">
+            </label>
+        </p>
+
+    </form>
+    <button id="button">Расчитать стоимость</button>
+    <p id="finalPrice"></p>
+      
+          <script src="script.js"></script>
+        </section>
+      </div>
+    </main>
+<footer class="footer">
+<div class="content">
+    <div class="wrapper">
+        <div class="footer__text">
+          <div class="footer__text">Все права запрещены</div>
+        </div>
+    </div>
+</div>
+</footer>
 </body>
 </html>
