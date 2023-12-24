@@ -1,84 +1,143 @@
-class Product {
-  constructor(priceOption, quantity, souce, bag) {
-      this.name = "";
-      this.pricePerOne = "";
-      this.quantity = parseFloat(quantity);
-      this.souce = souce;
-      this.bag = bag;
-
-      if (this.quantity < 1) {
-          throw new Error('Quantity cannot be less than 1');
+document.addEventListener("DOMContentLoaded", function () {
+    const quantityInput = document.getElementById("quantity");
+    const totalCostSpan = document.getElementById("totalCost");
+  
+    function calculateTotal() {
+      let totalCost = 0;
+  
+      const selectedServiceType = document.querySelector(
+        'input[name="serviceType"]:checked'
+      );
+      if (selectedServiceType) {
+        totalCost += parseFloat(selectedServiceType.getAttribute("data-price"));
       }
-      if(Number.isInteger(this.quantity) === false) {
-          throw new Error('Quantity should be a positive number');
+  
+      const optionsSelect = document.getElementById("optionsSelect");
+      if (optionsSelect && optionsSelect.style.display !== "none") {
+        const selectedOption = optionsSelect.options[optionsSelect.selectedIndex];
+        totalCost += parseFloat(selectedOption.getAttribute("data-price"));
       }
-
-      let i=0;
-      for(i; i<priceOption.length && priceOption[i]!==' '; i++) {
-          this.name += priceOption[i];
+  
+      const propertyCheckbox = document.getElementById("propertyCheckbox");
+      if (
+        propertyCheckbox &&
+        propertyCheckbox.checked &&
+        propertyCheckbox.style.display !== "none"
+      ) {
+        totalCost += parseFloat(propertyCheckbox.getAttribute("data-price"));
       }
-      i++;
-      for(i; i<priceOption.length && priceOption[i]!==' ' && priceOption[i]!=='р'; i++) {
-          this.pricePerOne += priceOption[i];
+  
+      let quantity = parseFloat(quantityInput.value);
+  
+      if (isNaN(quantity) || quantity < 0) {
+        quantity = 0;
       }
-      this.pricePerOne = parseFloat(this.pricePerOne);
-  }
-
-  getFinalPrice() {
-      if(this.name==="Наполеон")
-          return this.pricePerOne * this.quantity
-      if(this.name==="Американо")
-          return this.pricePerOne * this.quantity + this.bag;
-      return this.pricePerOne * this.quantity + this.bag + this.souce;
-  }
-}
-
-function onClick(event) {
-  event.preventDefault();
-  let productOption = document.querySelector("select[name=myselect] option:checked").text;
-  let quantity = document.getElementById('quantity').value;
-
-  let souce = Number(document.querySelector("input[name=myradio]:checked") ? document.querySelector("input[name=myradio]:checked").value : 0);
-
-  let bag = document.querySelector("#mycheckbox input[type=checkbox]").checked ? Number(document.querySelector("#mycheckbox input[type=checkbox]").value) : 0;
-
-  try {
-      let product = new Product(productOption, quantity, Number(souce), Number(bag));
-      document.getElementById('finalPrice').textContent = 'Final price: ' + product.getFinalPrice();
-  } catch (error) {
-      console.error(error.message);
-      alert(error.message);
-  }
-}
-
-window.addEventListener('DOMContentLoaded', function (event) {
-  let s = document.getElementsByName("myselect")[0];
-  let c = document.querySelector("#mycheckbox input[type=checkbox]");
-  document.getElementById('button').addEventListener('click', onClick);
-
-  s.addEventListener("change", function (event) {
-      let select = event.target;
-      let radios = document.getElementById("myradios");
-      console.log(select.value);
-
-      if (select.value === "3") {
-          radios.style.display = "none";
-          c.parentNode.style.display = "none";
-      } else if(select.value === "2") {
-          radios.style.display = "none";
-          c.parentNode.style.display = "block";
+  
+      totalCost *= quantity;
+  
+      if (!isNaN(totalCost)) {
+        totalCostSpan.textContent = totalCost;
+      } else {
+        totalCostSpan.textContent = "0";
       }
-      else {
-          radios.style.display = "block";
-          c.parentNode.style.display = "block";
+    }
+  
+    function updateOptionsAndProperties() {
+      const selectedServiceType = document.querySelector(
+        'input[name="serviceType"]:checked'
+      ).value;
+      const optionsDiv = document.getElementById("optionsDiv");
+      const propertiesDiv = document.getElementById("propertiesDiv");
+  
+      if (selectedServiceType === "type1") {
+        optionsDiv.style.display = "none";
+        propertiesDiv.style.display = "none";
+      } else if (selectedServiceType === "type2") {
+        optionsDiv.style.display = "block";
+        propertiesDiv.style.display = "none";
+      } else {
+        optionsDiv.style.display = "none";
+        propertiesDiv.style.display = "block";
       }
-  });
-
-  let r = document.querySelectorAll(".myradios input[type=radio]");
-  r.forEach(function (radio) {
-      radio.addEventListener("change", function (event) {
-          let r = event.target;
-          console.log(r.value);
+    }
+  
+    function handleInput() {
+      updateOptionsAndProperties();
+      calculateTotal();
+    }
+  
+    document
+      .querySelectorAll('input[name="serviceType"]')
+      .forEach(function (radio) {
+        radio.addEventListener("change", handleInput);
       });
+  
+    document
+      .getElementById("optionsSelect")
+      .addEventListener("change", calculateTotal);
+    document
+      .getElementById("propertyCheckbox")
+      .addEventListener("change", calculateTotal);
+    quantityInput.addEventListener("input", calculateTotal);
+  
+    handleInput();
   });
+  
+// создание слайдера
+function createSlick(number){
+    $('.slider').not('.slick-initialized').slick({
+        arrows:true,
+        dots:true,
+        slidesToShow:number,
+        autoplay:false,
+        speed:1000,
+        autoplaySpeed:800,
+    });
+}
+
+// вычисление количества картинок для показа
+function calculateNumberOfSlidesToShow(){
+    var sliderWidth = $('.slider').width();
+    var slidesToShow = 0;
+    switch (true) {
+        case (sliderWidth < 500):
+            slidesToShow = 1;
+            break;
+        case (sliderWidth < 767):
+            slidesToShow = 2;
+            break;
+        case (sliderWidth < 1199):
+            slidesToShow = 3;
+            break;
+        case (sliderWidth > 1200):
+            slidesToShow = 3;
+            break;
+    }
+
+    return slidesToShow;
+}
+
+// перезагружаем слайдер по изменене размера окна
+function reloadSlick () {
+    $('.slider').slick('unslick');
+    slidesToShow = calculateNumberOfSlidesToShow();
+    createSlick(slidesToShow);
+}
+
+// вызываем каждый раз по ресайзу
+jQuery(window).on("resize", reloadSlick);
+
+
+
+jQuery(document).ready(function () {
+
+    // инициализация слайдера по загрузке страницы
+    if ($('.slider').length) {
+        setTimeout(function () {
+            slidesToShow = calculateNumberOfSlidesToShow();
+            createSlick(slidesToShow);
+        }, 300);
+    }
+
+
 });
